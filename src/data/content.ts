@@ -1,0 +1,93 @@
+// This file contains all the content for the site
+// Update this file whenever I need to add, change, or remove experiences, projects, or designs.
+// Site will automatically update to reflect the changes.
+
+export const education = [
+  {
+    institution: 'University of Virginia',
+    degree: 'B.S. COMPUTER SCIENCE & B.A. MATHEMATICS',
+    description: 'GPA: 3.8/4.0',
+  },
+  {
+    institution: 'Heritage High School',
+    degree: 'ADVANCED STUDIES DIPLOMA',
+    description: 'GPA: 4.47/4.0\nActivities: President of Computer Science Honor Society, Meetings Coordinator of Science National Honor Society, NHS, Engineering Club, & CyberPatriot.\n\nRelevant coursework: AP Calculus BC, AP Computer Science A, Web Development, AP Microeconomics, AP Macroeconomics, AP Statistics, AP Chemistry, DE Physics 1 & 2, AP Physics C Mechanics, and AP Language and Composition.',
+  }
+]
+
+export const work = [
+  {
+    role: 'Software Engineer Intern',
+    company: 'Arcturus Technologies',
+    period: 'Jun 2024 — Aug 2024',
+    description: 'Streamlined internal data workflows by creating automated scripts, improving data processing efficiency by 15%.',
+  },
+  {
+    role: 'Tutor',
+    company: 'Mathnasium',
+    period: '2022 — 2025',
+    description: 'Provided personalized tutoring in mathematics for students of various ages and skill levels, helping them improve their understanding and performance in the subject.',
+  },
+]
+
+export const projects = [
+  {
+    title: 'UVA-SIS Sniper',
+    description: "A Python script that monitors UVA course enrollment through the actual SIS API and sends real-time Discord or email notifications when spots open up in your tracked classes.",
+    tech: ['Python', 'Google Cloud Platform', 'Discord Webhooks', 'SIS API'],
+    demo: '#',
+    github: 'https://github.com/RohanB2/SIS-Enrollment-Sniper'
+  },
+  {
+    title: 'Music Agenda',
+    description: "A premium macOS app for tracking your album listening journey. Search Apple Music's catalog, build your personal listening agenda, and track your progress song by song.",
+    tech: ['Swift', 'iTunesAPI', 'SwiftUI', 'xCode'],
+    demo: '#',
+    github: 'https://github.com/RohanB2/MusicAgenda'
+  },
+  {
+    title: 'Algorithmic Backtester',
+    description: 'A backtesting engine utilizing Monte Carlo simulations and historical bootstrapping to evaluate algorithmic trading strategies against statistical distributions.\n\n' +
+      'Implemented comprehensive risk and statistical metrics such as Sharpe Ratios, drawdown profiles, and confidence intervals in order to benchmark baseline strategy performance directly against simulated market paths.',
+    tech: ['Python', 'Pandas', 'NumPy', 'Matplotlib'],
+    demo: '#',
+    github: '#'
+  }
+]
+
+export interface DesignItem {
+  id: string;
+  src: string;
+  alt: string;
+  link?: string;
+}
+
+export const designs: DesignItem[] = [
+  {
+    // Use the s3 links from Behance projects by just inspect element, or put them in assets folder.
+    // Links work better.
+
+    // No link, will open in fullscreen viewer
+
+    id: 'design-1',
+    src: 'https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/899641250714081.6a25f2ced4065.png',
+    alt: 'UVA Mens Tennis 2026 All ACC & POTY',
+    link: 'https://www.behance.net/gallery/250714081/UVA-Mens-Tennis-2026'
+  },
+  {
+    id: 'design-2',
+    src: 'https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/4ecf0c250759347.6a26ec76e5df5.png',
+    alt: 'Malik Thomas Countdown',
+    link: 'https://www.behance.net/gallery/250759347/Malik-Thomas-Countdown?platform=direct'
+  },
+  // {
+  //   id: 'design-3',
+  //   src: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&q=80',
+  //   alt: 'Sample Design 3'
+  // },
+  // {
+  //   id: 'design-4',
+  //   src: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&q=80',
+  //   alt: 'Sample Design 4'
+  // }
+]

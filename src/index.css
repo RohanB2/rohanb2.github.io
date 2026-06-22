@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+
+:root, [data-theme='light'] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --text-tertiary: #9ca3af;
+  --accent-color: #000000;
+  --border-color: #e5e7eb;
+  --hover-bg: #f3f4f6;
+  --spotlight-color: rgba(0, 0, 0, 0.03);
+}
+
+[data-theme='dark'] {
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #121212;
+  --text-primary: #f3f4f6;
+  --text-secondary: #9ca3af;
+  --text-tertiary: #6b7280;
+  --accent-color: #ffffff;
+  --border-color: #262626;
+  --hover-bg: #171717;
+  --spotlight-color: rgba(255, 255, 255, 0.05);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  line-height: 1.7;
+  overflow-x: hidden;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.font-serif {
+  font-family: 'Playfair Display', serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Layout */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+@media (max-width: 1024px) {
+  .app-container {
+    flex-direction: column;
+  }
+}
+
+.left-pane {
+  flex: 0 0 40%;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: none;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  .left-pane {
+    position: relative;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+    padding: 2rem;
+  }
+}
+
+.left-pane-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.right-pane {
+  flex: 1;
+  padding: 4rem;
+  background-color: transparent;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 1024px) {
+  .right-pane {
+    padding: 2rem;
+  }
+}
+
+/* Navigation Links */
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  position: relative;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--text-primary);
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  left: -1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 2px;
+  background-color: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+.nav-link.active::before {
+  width: 0.5rem;
+}
+
+/* Tabular Content Utilities */
+.content-item {
+  margin-bottom: 3rem;
+}
+
+.content-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.content-meta {
+  font-size: 0.875rem;
+  color: var(--text-tertiary);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.content-separator {
+  width: 2rem;
+  height: 2px;
+  background-color: var(--border-color);
+  margin: 1rem 0;
+}
+
+.content-desc {
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+/* Text reveal effect for Name */
+.reveal-text {
+  background-size: 200% auto;
+  color: var(--text-primary);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 5s linear infinite;
+}
+
+[data-theme='light'] .reveal-text {
+  background-image: linear-gradient(to right, #000 0%, #666 50%, #000 100%);
+}
+[data-theme='dark'] .reveal-text {
+  background-image: linear-gradient(to right, #fff 0%, #888 50%, #fff 100%);
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* Design Grid */
+.design-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.design-item {
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  background-color: var(--hover-bg);
+  cursor: pointer;
+  border-radius: 4px;
+  will-change: transform, opacity; /* optimize JS animation */
+}
+
+.design-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none; /* Let container handle hover */
+}
+
+.design-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* Let container handle click */
+}
+
+.design-item:hover .design-overlay {
+  opacity: 1;
+}
