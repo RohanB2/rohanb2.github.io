@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Moon, Sun } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
-import './App.css'
 
 import Experience from './components/Experience'
 import Projects from './components/Projects'
