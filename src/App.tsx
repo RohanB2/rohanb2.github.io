@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Moon, Sun } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 
+import About from './components/About'
 import Experience from './components/Experience'
 import Projects from './components/Projects'
 import Design from './components/Design'
@@ -10,7 +11,7 @@ import ParticleNetwork from './components/ParticleNetwork'
 
 function App() {
   const [theme, setTheme] = useState<'light' | 'dark'>('dark')
-  const [activeSection, setActiveSection] = useState<'experience' | 'projects' | 'design' | 'contact'>('experience')
+  const [activeSection, setActiveSection] = useState<'about' | 'experience' | 'projects' | 'design' | 'contact'>('about')
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme)
@@ -19,6 +20,7 @@ function App() {
   const toggleTheme = () => setTheme(theme === 'light' ? 'dark' : 'light')
 
   const navItems = [
+    { id: 'about', label: 'About' },
     { id: 'experience', label: 'Experience' },
     { id: 'projects', label: 'Projects' },
     { id: 'design', label: 'Design' },
@@ -39,9 +41,6 @@ function App() {
             <h2 style={{ fontSize: '1.25rem', fontWeight: 400, color: 'var(--text-secondary)', marginBottom: '1rem' }}>
               Engineer & Graphic Designer
             </h2>
-            <p style={{ color: 'var(--text-tertiary)', maxWidth: '300px', fontSize: '0.9rem', lineHeight: 1.6 }}>
-              Building elegant, robust, and accessible digital experiences at the intersection of design and engineering.
-            </p>
           </div>
 
           <nav style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '4rem', flexGrow: 1 }}>
@@ -78,6 +77,7 @@ function App() {
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
           >
+            {activeSection === 'about' && <About />}
             {activeSection === 'experience' && <Experience />}
             {activeSection === 'projects' && <Projects />}
             {activeSection === 'design' && <Design />}

@@ -91,3 +91,8 @@ export const designs: DesignItem[] = [
   //   alt: 'Sample Design 4'
   // }
 ]
+
+export const about = [
+  "I am an Engineer and Graphic Designer passionate about building elegant, robust, and accessible digital experiences. I enjoy working at the intersection of design and engineering to create products that not only look great but also function flawlessly under the hood.",
+  "Currently, I am focused on developing modern web applications and exploring new ways to blend creative design with scalable architecture. When I'm not coding or designing, you can usually find me working on personal projects or learning about the latest technologies."
+]
