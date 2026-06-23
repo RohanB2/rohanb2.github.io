@@ -1,6 +1,6 @@
 export default function Contact() {
   return (
-    <div>
+    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', minHeight: '70vh' }}>
       <h2 style={{ fontSize: '2rem', marginBottom: '3rem', fontWeight: 700 }}>Get In Touch</h2>
       
       <div className="content-item">
