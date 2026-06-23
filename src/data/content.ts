@@ -93,6 +93,7 @@ export const designs: DesignItem[] = [
 ]
 
 export const about = [
-  "I am an Engineer and Graphic Designer passionate about building elegant, robust, and accessible digital experiences. I enjoy working at the intersection of design and engineering to create products that not only look great but also function flawlessly under the hood.",
-  "Currently, I am focused on developing modern web applications and exploring new ways to blend creative design with scalable architecture. When I'm not coding or designing, you can usually find me working on personal projects or learning about the latest technologies."
+  "I'm a Computer Science student with a deep interest in the intersection of software and hardware. I love exploring how things work under the hood, spending my time building projects, learning about systems, and keeping up with the latest in the tech space.",
+  "Beyond coding, I'm a massive sports fan—especially when it comes to basketball. I merge this passion with digital art through sports graphic design, spending my free time creating dynamic player graphics and improving my skills in Photoshop.",
+  "A lot of the projects I work on have been practical and fruitful in some aspect of my life. Whether I'm automating a tedious task to make my own routine more efficient or building out a larger system, I'm driven by the desire to create solutions that are genuinely useful in the real world."
 ]
