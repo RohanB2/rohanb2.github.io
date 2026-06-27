@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from 'react'
 import { designs } from '../data/content'
-import { Search, ExternalLink, X } from 'lucide-react'
+import { Search, ExternalLink, X, ChevronLeft, ChevronRight } from 'lucide-react'
 import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from 'framer-motion'
 
 export default function Design() {
   const gridRef = useRef<HTMLDivElement>(null)
-  const [selectedImage, setSelectedImage] = useState<string | null>(null)
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null)
 
   // Motion values for the parallax card effect
   const mouseX = useMotionValue(0)
@@ -28,11 +28,29 @@ export default function Design() {
 
   // Reset rotation when modal closes
   useEffect(() => {
-    if (!selectedImage) {
+    if (selectedIndex === null) {
       mouseX.set(0)
       mouseY.set(0)
     }
-  }, [selectedImage, mouseX, mouseY])
+  }, [selectedIndex, mouseX, mouseY])
+
+  // Keyboard navigation
+  useEffect(() => {
+    if (selectedIndex === null) return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setSelectedIndex(null)
+      } else if (e.key === 'ArrowRight') {
+        setSelectedIndex((prev) => (prev !== null && prev === designs.length - 1 ? 0 : prev! + 1))
+      } else if (e.key === 'ArrowLeft') {
+        setSelectedIndex((prev) => (prev !== null && prev === 0 ? designs.length - 1 : prev! - 1))
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [selectedIndex])
 
   useEffect(() => {
     const grid = gridRef.current
@@ -117,20 +135,23 @@ export default function Design() {
     }
   }, [designs])
 
+  const selectedDesign = selectedIndex !== null ? designs[selectedIndex] : null;
+
   return (
     <div>
-      <h2 style={{ fontSize: '2rem', marginBottom: '3rem', fontWeight: 700 }}>Design & Graphics</h2>
+      <h2 style={{ fontSize: '2rem', marginBottom: '3rem', fontWeight: 700 }}>Graphic Design</h2>
       
       <div ref={gridRef} className="design-grid">
-        {designs.map((design) => (
+        {designs.map((design, index) => (
           <div 
             key={design.id} 
             className="design-item"
             onClick={() => {
               if (design.link) {
+                // If they click the grid item, open in new tab directly (as requested originally)
                 window.open(design.link, '_blank')
               } else {
-                setSelectedImage(design.src)
+                setSelectedIndex(index)
               }
             }}
           >
@@ -146,12 +167,13 @@ export default function Design() {
       </div>
 
       <AnimatePresence>
-        {selectedImage && (
+        {selectedDesign && (
           <motion.div
+            key="modal"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            onClick={() => setSelectedImage(null)}
+            onClick={() => setSelectedIndex(null)}
             onMouseMove={handleMouseMove}
             style={{
               position: 'fixed',
@@ -187,31 +209,119 @@ export default function Design() {
               <X size={32} />
             </motion.button>
 
-            <motion.div
-              style={{
-                rotateX: smoothRotateX,
-                rotateY: smoothRotateY,
-                transformStyle: 'preserve-3d',
+            {/* Left Nav Button */}
+            <motion.button
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              onClick={(e) => {
+                e.stopPropagation()
+                setSelectedIndex((prev) => (prev !== null && prev === 0 ? designs.length - 1 : prev! - 1))
               }}
-              initial={{ scale: 0.9, opacity: 0, y: 20 }}
-              animate={{ scale: 1, opacity: 1, y: 0 }}
-              exit={{ scale: 0.9, opacity: 0, y: 20 }}
-              transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-              onClick={(e) => e.stopPropagation()}
+              style={{
+                position: 'absolute',
+                left: '2rem',
+                background: 'rgba(255, 255, 255, 0.1)',
+                border: 'none',
+                color: 'white',
+                cursor: 'pointer',
+                zIndex: 110,
+                padding: '1rem',
+                borderRadius: '50%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                backdropFilter: 'blur(10px)'
+              }}
             >
-              <img
-                src={selectedImage}
-                alt="Fullscreen view"
+              <ChevronLeft size={32} />
+            </motion.button>
+
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={selectedDesign.id} // Animate when the image changes
                 style={{
-                  maxWidth: '90vw',
-                  maxHeight: '90vh',
-                  objectFit: 'contain',
-                  borderRadius: '12px',
-                  boxShadow: '0 30px 60px -12px rgba(0, 0, 0, 0.8), 0 0 40px rgba(255,255,255,0.05)',
-                  display: 'block' // Removes tiny bottom margin from inline elements
+                  rotateX: smoothRotateX,
+                  rotateY: smoothRotateY,
+                  transformStyle: 'preserve-3d',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  gap: '1.5rem'
                 }}
-              />
-            </motion.div>
+                initial={{ scale: 0.9, opacity: 0, y: 20 }}
+                animate={{ scale: 1, opacity: 1, y: 0 }}
+                exit={{ scale: 0.9, opacity: 0, y: -20 }}
+                transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+                onClick={(e) => e.stopPropagation()}
+              >
+                <img
+                  src={selectedDesign.src}
+                  alt={selectedDesign.alt}
+                  style={{
+                    maxWidth: '90vw',
+                    maxHeight: '80vh',
+                    objectFit: 'contain',
+                    borderRadius: '12px',
+                    boxShadow: '0 30px 60px -12px rgba(0, 0, 0, 0.8), 0 0 40px rgba(255,255,255,0.05)',
+                    display: 'block'
+                  }}
+                />
+                
+                {selectedDesign.link && (
+                  <motion.a
+                    href={selectedDesign.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '0.5rem',
+                      padding: '0.75rem 1.5rem',
+                      backgroundColor: 'white',
+                      color: 'black',
+                      borderRadius: '9999px',
+                      textDecoration: 'none',
+                      fontWeight: 600,
+                      fontSize: '0.9rem',
+                      boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.5)'
+                    }}
+                  >
+                    Open Project <ExternalLink size={16} />
+                  </motion.a>
+                )}
+              </motion.div>
+            </AnimatePresence>
+
+            {/* Right Nav Button */}
+            <motion.button
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: 20 }}
+              onClick={(e) => {
+                e.stopPropagation()
+                setSelectedIndex((prev) => (prev !== null && prev === designs.length - 1 ? 0 : prev! + 1))
+              }}
+              style={{
+                position: 'absolute',
+                right: '2rem',
+                background: 'rgba(255, 255, 255, 0.1)',
+                border: 'none',
+                color: 'white',
+                cursor: 'pointer',
+                zIndex: 110,
+                padding: '1rem',
+                borderRadius: '50%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                backdropFilter: 'blur(10px)'
+              }}
+            >
+              <ChevronRight size={32} />
+            </motion.button>
           </motion.div>
         )}
       </AnimatePresence>

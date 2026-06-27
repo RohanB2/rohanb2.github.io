@@ -92,23 +92,33 @@ export const designs: DesignItem[] = [
   },
   {
     id: 'design-5',
-    src: '/assets/Experimental-Gradiant.png',
-    alt: 'Experimental Gradients'
-  },
-  {
-    id: 'design-6',
-    src: '/assets/Greenzy-Twitter-Header-Gradient.png',
-    alt: 'Gradient Twitter Header'
-  },
-  {
-    id: 'design-7',
     src: '/assets/never-will-be-design.png',
     alt: 'Experiemental Design'
   },
   {
-    id: 'design-8',
+    id: 'design-6',
+    src: '/assets/Experimental-Gradiant.png',
+    alt: 'Experimental Gradients'
+  },
+  {
+    id: 'design-7',
     src: '/assets/Steelseries-Arctis-9X.png',
     alt: 'Arctis 9X Advertisement'
+  },
+  {
+    id: 'design-8',
+    src: '/assets/Naive-Rumble-Twitter-Header.png',
+    alt: 'Rumble Twitter Header'
+  },
+    {
+    id: 'design-9',
+    src: '/assets/Greenzy-Twitter-Header-Gradient.png',
+    alt: 'Gradient Twitter Header'
+  },
+  {
+    id: 'design-10',
+    src: '/assets/Parallel-Arno-Twitter-Header.png',
+    alt: 'Arno Twitter Header'
   }
 ]
 
