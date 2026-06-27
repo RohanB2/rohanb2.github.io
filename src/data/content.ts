@@ -83,12 +83,32 @@ export const designs: DesignItem[] = [
   {
     id: 'design-3',
     src: '/assets/Brunson-NYK-Poster-W-Circles.png',
-    alt: 'Sample Design 3'
+    alt: 'Brunson Burner (2024-2025)'
   },
   {
     id: 'design-4',
     src: '/assets/Apple-Airpods-2-Advertisment.png',
-    alt: 'Sample Design 4'
+    alt: 'Apple Airpods 2 Advertisment'
+  },
+  {
+    id: 'design-5',
+    src: '/assets/Experimental-Gradiant.png',
+    alt: 'Experimental Gradients'
+  },
+  {
+    id: 'design-6',
+    src: '/assets/Greenzy-Twitter-Header-Gradient.png',
+    alt: 'Gradient Twitter Header'
+  },
+  {
+    id: 'design-7',
+    src: '/assets/never-will-be-design.png',
+    alt: 'Experiemental Design'
+  },
+  {
+    id: 'design-8',
+    src: '/assets/Steelseries-Arctis-9X.png',
+    alt: 'Arctis 9X Advertisement'
   }
 ]
 
