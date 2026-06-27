@@ -80,16 +80,16 @@ export const designs: DesignItem[] = [
     alt: 'Malik Thomas Countdown',
     link: 'https://www.behance.net/gallery/250759347/Malik-Thomas-Countdown?platform=direct'
   },
-  // {
-  //   id: 'design-3',
-  //   src: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&q=80',
-  //   alt: 'Sample Design 3'
-  // },
-  // {
-  //   id: 'design-4',
-  //   src: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&q=80',
-  //   alt: 'Sample Design 4'
-  // }
+  {
+    id: 'design-3',
+    src: 'src/assets/Brunson-NYK-Poster-W-Circles.png',
+    alt: 'Sample Design 3'
+  },
+  {
+    id: 'design-4',
+    src: 'src/assets/Apple-Airpods-2-Advertisment.png',
+    alt: 'Sample Design 4'
+  }
 ]
 
 export const about = [
