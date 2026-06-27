@@ -82,12 +82,12 @@ export const designs: DesignItem[] = [
   },
   {
     id: 'design-3',
-    src: 'src/assets/Brunson-NYK-Poster-W-Circles.png',
+    src: '/assets/Brunson-NYK-Poster-W-Circles.png',
     alt: 'Sample Design 3'
   },
   {
     id: 'design-4',
-    src: 'src/assets/Apple-Airpods-2-Advertisment.png',
+    src: '/assets/Apple-Airpods-2-Advertisment.png',
     alt: 'Sample Design 4'
   }
 ]
