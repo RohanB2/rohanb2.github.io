@@ -3,7 +3,8 @@ import { Moon, Sun } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 import About from './components/About'
-import Experience from './components/Experience'
+import Education from './components/Education'
+import Work from './components/Work'
 import Projects from './components/Projects'
 import Design from './components/Design'
 import Contact from './components/Contact'
@@ -11,7 +12,7 @@ import ParticleNetwork from './components/ParticleNetwork'
 
 function App() {
   const [theme, setTheme] = useState<'light' | 'dark'>('dark')
-  const [activeSection, setActiveSection] = useState<'about' | 'experience' | 'projects' | 'design' | 'contact'>('about')
+  const [activeSection, setActiveSection] = useState<'about' | 'education' | 'work' | 'projects' | 'design' | 'contact'>('about')
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme)
@@ -21,7 +22,8 @@ function App() {
 
   const navItems = [
     { id: 'about', label: 'About' },
-    { id: 'experience', label: 'Experience' },
+    { id: 'education', label: 'Education' },
+    { id: 'work', label: 'Work' },
     { id: 'projects', label: 'Projects' },
     { id: 'design', label: 'Design' },
     { id: 'contact', label: 'Contact' },
@@ -78,7 +80,8 @@ function App() {
             transition={{ duration: 0.3, ease: 'easeInOut' }}
           >
             {activeSection === 'about' && <About />}
-            {activeSection === 'experience' && <Experience />}
+            {activeSection === 'education' && <Education />}
+            {activeSection === 'work' && <Work />}
             {activeSection === 'projects' && <Projects />}
             {activeSection === 'design' && <Design />}
             {activeSection === 'contact' && <Contact />}

@@ -234,7 +234,7 @@ export default function Design() {
                 backdropFilter: 'blur(10px)'
               }}
             >
-              <ChevronLeft size={32} />
+              <ChevronLeft size={26} />
             </motion.button>
 
             <AnimatePresence mode="wait">
@@ -320,7 +320,7 @@ export default function Design() {
                 backdropFilter: 'blur(10px)'
               }}
             >
-              <ChevronRight size={32} />
+              <ChevronRight size={26} />
             </motion.button>
           </motion.div>
         )}

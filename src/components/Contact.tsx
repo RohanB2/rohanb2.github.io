@@ -1,7 +1,8 @@
 export default function Contact() {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', minHeight: '70vh' }}>
-      <h2 style={{ fontSize: '2rem', marginBottom: '3rem', fontWeight: 700 }}>Get In Touch</h2>
+    <div style={{ display: 'flex', flexDirection: 'column', minHeight: 'calc(100vh - 12rem)' }}>
+      <div style={{ marginTop: 'auto', marginBottom: 'auto' }}>
+        <h2 style={{ fontSize: '2rem', marginBottom: '3rem', fontWeight: 700 }}>Get In Touch</h2>
       
       <div className="content-item">
         <h3 className="content-title">Let's build something together.</h3>
@@ -29,6 +30,7 @@ export default function Contact() {
             <span style={{ fontWeight: 500 }}>Northern Virginia / Charlottesville, VA</span>
           </div>
         </div>
+      </div>
       </div>
     </div>
   )

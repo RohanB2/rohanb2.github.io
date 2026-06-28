@@ -2,8 +2,9 @@ import { projects } from '../data/content'
 
 export default function Projects() {
   return (
-    <div>
-      <h2 style={{ fontSize: '2rem', marginBottom: '3rem', fontWeight: 700 }}>Projects</h2>
+    <div style={{ display: 'flex', flexDirection: 'column', minHeight: 'calc(100vh - 12rem)' }}>
+      <div style={{ marginTop: 'auto', marginBottom: 'auto' }}>
+        <h2 style={{ fontSize: '2rem', marginBottom: '3rem', fontWeight: 700 }}>Projects</h2>
       
       <div>
         {projects.map((project, index) => (
@@ -21,6 +22,7 @@ export default function Projects() {
             <p className="content-desc" style={{ whiteSpace: 'pre-line' }}>{project.description}</p>
             </div>
         ))}
+      </div>
       </div>
     </div>
   )
