@@ -13,9 +13,12 @@ export default function Projects() {
             <h3 className="content-title" style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
               {project.title}
               <div style={{ display: 'flex', gap: '0.5rem' }}>
-                <a href={project.github} style={{ fontSize: '0.875rem', fontWeight: 500, color: 'var(--text-tertiary)', textDecoration: 'underline', textDecorationColor: 'transparent', transition: 'text-decoration-color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.textDecorationColor = 'currentColor'} onMouseOut={(e) => e.currentTarget.style.textDecorationColor = 'transparent'}>View Repo ↗</a>
-                {/* demo text */}
-                {/* <a href={project.demo} style={{ fontSize: '0.875rem', fontWeight: 500, color: 'var(--text-tertiary)', textDecoration: 'underline', textDecorationColor: 'transparent', transition: 'text-decoration-color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.textDecorationColor = 'currentColor'} onMouseOut={(e) => e.currentTarget.style.textDecorationColor = 'transparent'}>Demo ↗</a> */}
+                {project.github && project.github !== '#' && (
+                  <a href={project.github} target="_blank" rel="noreferrer" style={{ fontSize: '0.875rem', fontWeight: 500, color: 'var(--text-tertiary)', textDecoration: 'underline', textDecorationColor: 'transparent', transition: 'text-decoration-color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.textDecorationColor = 'currentColor'} onMouseOut={(e) => e.currentTarget.style.textDecorationColor = 'transparent'}>View Repo ↗</a>
+                )}
+                {project.demo && project.demo !== '#' && (
+                  <a href={project.demo} target="_blank" rel="noreferrer" style={{ fontSize: '0.875rem', fontWeight: 500, color: 'var(--text-tertiary)', textDecoration: 'underline', textDecorationColor: 'transparent', transition: 'text-decoration-color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.textDecorationColor = 'currentColor'} onMouseOut={(e) => e.currentTarget.style.textDecorationColor = 'transparent'}>Demo ↗</a>
+                )}
               </div>
             </h3>
             <div className="content-separator"></div>
