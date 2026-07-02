@@ -33,9 +33,9 @@ export const work = [
 export const projects = [
   {
     title: 'UVA-SIS Sniper',
-    description: "A Python script that monitors UVA course enrollment through the actual SIS API and sends real-time Discord or email notifications when spots open up in your tracked classes.",
+    description: "A Python script that monitors UVA course enrollment through the actual SIS API and sends real-time Discord or email notifications when spots open up in your tracked classes.\nBuilt a site with a simple dashboard so that the bot and system is easier for me (and others whom I give password access) to use.",
     tech: ['Python', 'Google Cloud Platform', 'Discord Webhooks', 'SIS API'],
-    demo: '#',
+    demo: 'https://sis-sniper-site.vercel.app/',
     github: 'https://github.com/RohanB2/SIS-Enrollment-Sniper'
   },
   {
@@ -51,7 +51,7 @@ export const projects = [
       'Implemented comprehensive risk and statistical metrics such as Sharpe Ratios, drawdown profiles, and confidence intervals in order to benchmark baseline strategy performance directly against simulated market paths.',
     tech: ['Python', 'Pandas', 'NumPy', 'Matplotlib'],
     demo: '#',
-    github: '#'
+    github: 'https://github.com/RohanB2/Strategy-Backtester'
   }
 ]
 
