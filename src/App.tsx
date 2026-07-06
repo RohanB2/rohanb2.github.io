@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Moon, Sun } from 'lucide-react'
+
 import { motion, AnimatePresence } from 'framer-motion'
 
 import About from './components/About'
@@ -9,6 +9,7 @@ import Projects from './components/Projects'
 import Design from './components/Design'
 import Contact from './components/Contact'
 import ParticleNetwork from './components/ParticleNetwork'
+import { AnimatedGithubIcon, AnimatedLinkedinIcon, ThemeToggle } from './components/Icons'
 
 function App() {
   const [theme, setTheme] = useState<'light' | 'dark'>('dark')
@@ -40,9 +41,9 @@ function App() {
             <h1 style={{ fontSize: '3.5rem', fontWeight: 800, letterSpacing: '-0.05em', lineHeight: 1.1, marginBottom: '0.5rem' }}>
               <span className="reveal-text">Rohan Batra</span>
             </h1>
-            <h2 style={{ fontSize: '1.25rem', fontWeight: 400, color: 'var(--text-secondary)', marginBottom: '1rem' }}>
+            {/* <h2 style={{ fontSize: '1.25rem', fontWeight: 400, color: 'var(--text-secondary)', marginBottom: '1rem' }}>
               Engineer & Graphic Designer
-            </h2>
+            </h2> */}
           </div>
 
           <nav style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '4rem', flexGrow: 1 }}>
@@ -58,13 +59,14 @@ function App() {
             ))}
           </nav>
 
-          <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center', marginTop: '4rem' }}>
-            <a href="https://github.com/RohanB2" target="_blank" rel="noreferrer" style={{ fontSize: '0.875rem', fontWeight: 600, color: 'var(--text-secondary)' }}>GitHub</a>
-            <a href="https://www.linkedin.com/in/rohan-batra-87a20022a/" target="_blank" rel="noreferrer" style={{ fontSize: '0.875rem', fontWeight: 600, color: 'var(--text-secondary)' }}>LinkedIn</a>
-            <div style={{ width: '1px', height: '16px', backgroundColor: 'var(--border-color)' }}></div>
-            <button onClick={toggleTheme} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-secondary)', display: 'flex', alignItems: 'center' }} title="Toggle Theme">
-              {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
-            </button>
+          <div style={{ display: 'flex', gap: '1.5rem', marginTop: 'auto' }}>
+            <a href="https://github.com/RohanB2" target="_blank" rel="noreferrer" style={{ color: 'var(--text-secondary)', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = 'var(--text-primary)'} onMouseOut={(e) => e.currentTarget.style.color = 'var(--text-secondary)'}>
+              <AnimatedGithubIcon />
+            </a>
+            <a href="https://www.linkedin.com/in/rohan-batra-87a20022a/" target="_blank" rel="noreferrer" style={{ color: 'var(--text-secondary)', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = 'var(--text-primary)'} onMouseOut={(e) => e.currentTarget.style.color = 'var(--text-secondary)'}>
+              <AnimatedLinkedinIcon />
+            </a>
+            <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
           </div>
         </div>
       </div>

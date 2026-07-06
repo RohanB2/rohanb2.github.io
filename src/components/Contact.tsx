@@ -27,7 +27,7 @@ export default function Contact() {
           
           <div style={{ display: 'flex', gap: '1rem', alignItems: 'baseline' }}>
             <span className="content-meta" style={{ width: '80px', margin: 0 }}>Location</span>
-            <span style={{ fontWeight: 500 }}>Northern Virginia / Charlottesville, VA</span>
+            <span style={{ fontWeight: 500 }}>Charlottesville, VA</span>
           </div>
         </div>
       </div>

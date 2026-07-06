@@ -6,7 +6,7 @@ export const education = [
   {
     institution: 'University of Virginia',
     degree: 'B.S. COMPUTER SCIENCE & B.A. MATHEMATICS',
-    description: 'GPA: 3.8/4.0\nRelevant Coursework: \n• CS 2100: Data Structures and Algorithms 1\n• CS 2120: Discrete Math and Theory 1\n• CS 2130: Computer Systems and Organizations 1\n• APMA 3080: Linear Algebra',
+    description: 'GPA: 3.8/4.0\nActivites: Claude Developer Club, HooHacks, Google Developer Student Club\n\nRelevant Coursework: \n• CS 2100: Data Structures and Algorithms 1\n• CS 2120: Discrete Math and Theory 1\n• CS 2130: Computer Systems and Organizations 1\n• APMA 3080: Linear Algebra',
   },
   {
     institution: 'Heritage High School',
