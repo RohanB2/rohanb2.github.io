@@ -13,7 +13,7 @@ export default function Education() {
             <div style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '1rem' }}>
               {item.degree}
             </div>
-            <p className="content-desc" style={{ whiteSpace: 'pre-line' }}>{item.description}</p>
+            <p className="content-desc" style={{ whiteSpace: 'pre-line' }} dangerouslySetInnerHTML={{ __html: item.description }} />
           </div>
         ))}
       </div>

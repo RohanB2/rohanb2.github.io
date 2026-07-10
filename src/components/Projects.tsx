@@ -22,7 +22,7 @@ export default function Projects() {
               </div>
             </h3>
             <div className="content-separator"></div>
-            <p className="content-desc" style={{ whiteSpace: 'pre-line' }}>{project.description}</p>
+            <p className="content-desc" style={{ whiteSpace: 'pre-line' }} dangerouslySetInnerHTML={{ __html: project.description }} />
             </div>
         ))}
       </div>
