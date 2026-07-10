@@ -8,6 +8,7 @@ export const education = [
     degree: 'B.S. COMPUTER SCIENCE & B.A. MATHEMATICS',
     description: `Major GPA: 3.9/4.0
           Activites: Claude Developer Club, HooHacks, Google Developer Student Club
+
           Relevant Coursework: 
           • CS 2100: Data Structures and Algorithms 1
           • CS 2120: Discrete Math and Theory 1
@@ -19,6 +20,7 @@ export const education = [
     degree: 'ADVANCED STUDIES DIPLOMA',
     description: `GPA: 4.47/4.0
       Activities: President of Computer Science Honor Society, Meetings Coordinator of Science National Honor Society, NHS, Engineering Club, & CyberPatriot.
+      
       Relevant coursework: AP Calculus BC, AP Computer Science A, Web Development, AP Microeconomics, AP Macroeconomics, AP Statistics, AP Chemistry, DE Physics 1 & 2, AP Physics C Mechanics, and AP Language and Composition.`,
   }
 ]
