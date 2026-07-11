@@ -7,7 +7,7 @@ export const education = [
     institution: 'University of Virginia',
     degree: 'B.S. COMPUTER SCIENCE & B.A. MATHEMATICS',
     description: `Major GPA: 3.9/4.0
-          Activites: Claude Developer Club, HooHacks, Google Developer Student Club
+          Activites: Claude Developer Club, Google Developer Student Club, HooHacks, Wahoops
 
           Relevant Coursework: 
           • CS 2100: Data Structures and Algorithms 1
@@ -46,24 +46,24 @@ export const work = [
 
 export const projects = [
   {
-    title: 'UVA-SIS Sniper',
-    description: `A Python script that monitors UVA course enrollment through the actual SIS API and sends real-time Discord or email notifications when spots open up in your tracked classes.\n
-    Developed a site with a dashboard so the bot and system is easier for me (and others whom I give password access) to use.`,
+    title: 'UVA Course Spot Bot',
+    description: `• A Python script that monitors UVA course enrollment through the actual SIS API and sends real-time Discord or email notifications when spots open up in your tracked classes.
+    • Developed a site with a dashboard so the bot and system is easier for me (and others whom I give password access) to use.`,
     tech: ['Python', 'Google Cloud Platform', 'Discord Webhooks', 'SIS API'],
     demo: 'https://sis-sniper-site.vercel.app/',
     github: 'https://github.com/RohanB2/SIS-Enrollment-Sniper'
   },
   {
     title: 'Music Agenda',
-    description: "A premium macOS app for tracking your album listening journey. Search Apple Music's catalog, build your personal listening agenda, and track your progress song by song.",
+    description: "• A premium macOS app for tracking your album listening journey. Search Apple Music's catalog, build your personal listening agenda, and track your progress song by song.",
     tech: ['Swift', 'iTunesAPI', 'SwiftUI', 'xCode'],
     demo: '#',
     github: 'https://github.com/RohanB2/MusicAgenda'
   },
   {
     title: 'JSON Validator',
-    description: `Built a lightweight, robust <strong>JSON validator</strong> in <strong>C++</strong> capable of parsing and verifying the structural integrity of JSON data strings against standard formatting rules.\n
-              Implemented a <strong>lexer and recursive parser</strong> to accurately tokenize and validate JSON objects, arrays, and primitive data types, ensuring optimal execution performance.`,
+    description: `• Built a lightweight, robust <strong>JSON validator</strong> in <strong>C++</strong> capable of parsing and verifying the structural integrity of JSON data strings against standard formatting rules.
+              • Implemented a <strong>lexer and recursive parser</strong> to accurately tokenize and validate JSON objects, arrays, and primitive data types, ensuring optimal execution performance.`,
     tech: ['C++'],
     demo: '#',
     github: 'https://github.com/RohanB2/SimpleJSON-Validator'
