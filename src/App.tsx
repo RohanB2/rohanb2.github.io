@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 
 import { motion, AnimatePresence } from 'framer-motion'
+import { play } from 'cuelume'
 
 import About from './components/About'
 import Education from './components/Education'
@@ -19,7 +20,10 @@ function App() {
     document.documentElement.setAttribute('data-theme', theme)
   }, [theme])
 
-  const toggleTheme = () => setTheme(theme === 'light' ? 'dark' : 'light')
+  const toggleTheme = () => {
+    play('tick')
+    setTheme(theme === 'light' ? 'dark' : 'light')
+  }
 
   const navItems = [
     { id: 'about', label: 'About' },
@@ -51,7 +55,10 @@ function App() {
               <div key={item.id}>
                 <span 
                   className={`nav-link ${activeSection === item.id ? 'active' : ''}`}
-                  onClick={() => setActiveSection(item.id)}
+                  onClick={() => {
+                    play('tick')
+                    setActiveSection(item.id)
+                  }}
                 >
                   {item.label}
                 </span>
