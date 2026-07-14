@@ -50,7 +50,7 @@ export const projects = [
     description: `• A Python script that monitors UVA course enrollment through the actual SIS API and sends real-time Discord or email notifications when spots open up in your tracked classes.
     • Developed a site with a dashboard so the bot and system is easier for me (and others whom I give password access) to use.`,
     tech: ['Python', 'Google Cloud Platform', 'Discord Webhooks', 'SIS API'],
-    demo: 'https://sis-sniper-site.vercel.app/',
+    demo: 'https://sis-spot-bot.vercel.app/',
     github: 'https://github.com/RohanB2/SIS-Enrollment-Sniper'
   },
   {
