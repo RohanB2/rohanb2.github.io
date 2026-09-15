@@ -7,13 +7,16 @@ export const education = [
     institution: 'University of Virginia',
     degree: 'B.S. COMPUTER SCIENCE & B.A. MATHEMATICS',
     description: `Major GPA: 3.9/4.0
-          Activites: Claude Developer Club, Google Developer Student Club, HooHacks, Wahoops
+          Activities: Sports Analytics @ UVA, College Mentors for Kids, Wahoops, ML @ UVA, HooHacks, Google Developer Club, Claude Developer Club
 
           Relevant Coursework: 
-          • CS 2100: Data Structures and Algorithms 1
+          • CS 2100 & 3100: DSA1 & DSA2
           • CS 2120: Discrete Math and Theory 1
           • CS 2130: Computer Systems and Organizations 1
-          • APMA 3080: Linear Algebra`,
+          • CS 3140: Software Developer Essentials
+          • APMA 3080: Linear Algebra
+          • APMA 3100: Probability
+          • APMA 2130: Ordinary Differential Equations`,
   },
   {
     institution: 'Heritage High School',
@@ -54,20 +57,20 @@ export const projects = [
     github: 'https://github.com/RohanB2/SIS-Enrollment-Sniper'
   },
   {
-    title: 'Music Agenda',
-    description: "• A premium macOS app for tracking your album listening journey. Search Apple Music's catalog, build your personal listening agenda, and track your progress song by song.",
-    tech: ['Swift', 'iTunesAPI', 'SwiftUI', 'xCode'],
-    demo: '#',
-    github: 'https://github.com/RohanB2/MusicAgenda'
-  },
-  {
     title: 'JSON Validator',
     description: `• Built a lightweight, robust <strong>JSON validator</strong> in <strong>C++</strong> capable of parsing and verifying the structural integrity of JSON data strings against standard formatting rules.
               • Implemented a <strong>lexer and recursive parser</strong> to accurately tokenize and validate JSON objects, arrays, and primitive data types, ensuring optimal execution performance.`,
     tech: ['C++'],
     demo: '#',
     github: 'https://github.com/RohanB2/SimpleJSON-Validator'
-  }
+  },
+  {
+    title: 'Music Agenda',
+    description: "• A premium macOS app for tracking your album listening journey. Search Apple Music's catalog, build your personal listening agenda, and track your progress song by song.",
+    tech: ['Swift', 'iTunesAPI', 'SwiftUI', 'xCode'],
+    demo: '#',
+    github: 'https://github.com/RohanB2/MusicAgenda'
+  },
 ]
 
 export interface DesignItem {
