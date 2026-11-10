@@ -98,7 +98,7 @@ export const designs: DesignItem[] = [
   },
   {
     id: 'design-2',
-    src: '/assets/SamLewis.png',
+    src: '/assets/SamLewisCountdown.png',
     alt: 'Sam Lewis Countdown',
   },
   {
