@@ -32,7 +32,7 @@ export const work = [
   {
     role: 'Software Engineer Intern',
     company: 'Arcturus Technologies',
-    period: 'Jun 2024 — Aug 2024',
+    period: 'Jun 2026 — Aug 2026',
     description: 
     `• Developed a <strong>binary classification prediction</strong> model by leveraging the <strong>Yahoo Finance API</strong> & <strong>SciKit-Learn</strong>. Trained on <strong>OHLCV</strong> features using <strong>logistic regression</strong>, improving stock price prediction accuracy by <strong>15%</strong>.\n
     • Built a <strong>backtesting engine</strong> using <strong>Python, NumPy, Pandas, & Matplotlib</strong>; Integrated <strong>Monte Carlo simulations</strong> and <strong>historical bootstrapping</strong> to rigorously evaluate the performance of multiple trading strategy theses.\n
@@ -88,65 +88,80 @@ export const designs: DesignItem[] = [
     // No link, will open in fullscreen viewer
 
     id: 'design-1',
+    src: '/assets/GrunlohCountdown.png',
+    alt: 'Johann Grunloh Countdown',
+  },
+  {
+    id: 'design-2',
+    src: '/assets/ChristianHarmon.png',
+    alt: 'Christian Harmon Countdown',
+  },
+  {
+    id: 'design-2',
+    src: 'SamLewis.png',
+    alt: 'Sam Lewis Countdown',
+  },
+  {
+    id: 'design-1',
     src: 'https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/899641250714081.6a25f2ced4065.png',
     alt: 'UVA Mens Tennis 2026 All ACC & POTY',
     link: 'https://www.behance.net/gallery/250714081/UVA-Mens-Tennis-2026'
   },
   {
-    id: 'design-2',
+    id: 'design-5',
     src: 'https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/4ecf0c250759347.6a26ec76e5df5.png',
     alt: 'Malik Thomas Countdown',
     link: 'https://www.behance.net/gallery/250759347/Malik-Thomas-Countdown?platform=direct'
   },
   {
-    id: 'design-3',
+    id: 'design-6',
     src: '/assets/DCRafaChamp.png',
     alt: 'Rafa Jodar DC Open (Did not use)',
   },
   {
-    id: 'design-4',
+    id: 'design-7',
     src: '/assets/Brunson-NYK-Poster-W-Circles.png',
     alt: 'Brunson Burner (2024-2025)'
   },
   {
-    id: 'design-5',
+    id: 'design-8',
     src: '/assets/Apple-Airpods-2-Advertisment.png',
     alt: 'Apple Airpods 2 Advertisment'
   },
   {
-    id: 'design-6',
+    id: 'design-9',
     src: '/assets/never-will-be-design.png',
     alt: 'Experiemental Design'
   },
   {
-    id: 'design-7',
+    id: 'design-10',
     src: '/assets/Experimental-Gradiant.png',
     alt: 'Experimental Gradients'
   },
   {
-    id: 'design-8',
+    id: 'design-11',
     src: '/assets/Steelseries-Arctis-9X.png',
     alt: 'Arctis 9X Advertisement'
   },
   {
-    id: 'design-9',
+    id: 'design-12',
     src: '/assets/Naive-Rumble-Twitter-Header.png',
     alt: 'Rumble Twitter Header'
   },
     {
-    id: 'design-10',
+    id: 'design-13',
     src: '/assets/Greenzy-Twitter-Header-Gradient.png',
     alt: 'Gradient Twitter Header'
   },
   {
-    id: 'design-11',
+    id: 'design-14',
     src: '/assets/Parallel-Arno-Twitter-Header.png',
     alt: 'Arno Twitter Header'
   }
 ]
 
 export const about = [
-  "I'm a Computer Science & Math student at UVA with a deep interest in the intersection of software and hardware. I love exploring how things work under the hood, spending my time building projects, learning about systems, and keeping up with the latest in the tech space.",
+  "I'm a Computer Science & Math student at UVA with a deep interest in the intersection of software and hardware. I love exploring how things work under the hood and learning about low-level systems, and keeping up with the latest in the tech space.",
   "Beyond coding, I'm a massive sports fan—especially when it comes to basketball. I merge this passion with digital art through sports graphic design, spending my free time creating dynamic player graphics and improving my skills in Photoshop.",
   "A lot of the projects I work on have been practical and fruitful in some aspect of my life. Whether I'm automating a tedious task to make my own routine more efficient or building out a larger system, I'm driven by the desire to create solutions that are useful and speed things up."
 ]
