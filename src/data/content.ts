@@ -33,6 +33,16 @@ export const work = [
     role: 'Software Engineer Intern',
     company: 'Arcturus Technologies',
     period: 'Jun 2026 — Aug 2026',
+    description:
+    `Saved thousands of dollars in LLM API costs for ArcIn, a natural-language chatbot for the Applicare APM platform, by replacing external API calls with small local models (SQLCoder) for text-to-SQL generation and Qwen / Kimi K3 via Ollama for translating query results into plain English, all hosted on Azure.
+     Improved accuracy of ArcIn, reducing hallucinated data and ensuring queries pulled the right data, then aggregating results into coherent answers for federal, telecom, and healthcare clients.
+     Cut ArcIn response latency with query caching, slow-query optimization, and a query simplification layer for complex requests resulting in a 20% query to result speed increase.
+     Redesigned Applicare dashboard views by condensing dense data and adding new combined-data insights.`,
+  },
+  {
+    role: 'Software Engineer Intern',
+    company: 'Arcturus Technologies',
+    period: 'Jun 2025 — Aug 2025',
     description: 
     `• Developed a <strong>binary classification prediction</strong> model by leveraging the <strong>Yahoo Finance API</strong> & <strong>SciKit-Learn</strong>. Trained on <strong>OHLCV</strong> features using <strong>logistic regression</strong>, improving stock price prediction accuracy by <strong>15%</strong>.\n
     • Built a <strong>backtesting engine</strong> using <strong>Python, NumPy, Pandas, & Matplotlib</strong>; Integrated <strong>Monte Carlo simulations</strong> and <strong>historical bootstrapping</strong> to rigorously evaluate the performance of multiple trading strategy theses.\n
