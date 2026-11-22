@@ -34,10 +34,10 @@ export const work = [
     company: 'Arcturus Technologies',
     period: 'Jun 2026 — Aug 2026',
     description:
-    `Saved thousands of dollars in LLM API costs for ArcIn, a natural-language chatbot for the Applicare APM platform, by replacing external API calls with small local models (SQLCoder) for text-to-SQL generation and Qwen / Kimi K3 via Ollama for translating query results into plain English, all hosted on Azure.
-     Improved accuracy of ArcIn, reducing hallucinated data and ensuring queries pulled the right data, then aggregating results into coherent answers for federal, telecom, and healthcare clients.
-     Cut ArcIn response latency with query caching, slow-query optimization, and a query simplification layer for complex requests resulting in a 20% query to result speed increase.
-     Redesigned Applicare dashboard views by condensing dense data and adding new combined-data insights.`,
+    `• Saved <strong>$2000+</strong> in LLM API costs for ArcIn, a natural-language chatbot for the Applicare APM platform, by replacing external API calls with small local models (SQLCoder) for text-to-SQL generation and Qwen / Kimi K3 via Ollama for translating query results into plain English, all hosted on Azure.\n
+     • Improved accuracy of ArcIn, reducing hallucinated data and ensuring queries pulled the right data, then aggregating results into coherent answers for federal, telecom, and healthcare clients.\n
+     • Cut ArcIn response latency with query caching, slow-query optimization, and a query simplification layer for complex requests resulting in a 20% query to result speed increase.\n
+     • Redesigned Applicare dashboard views by condensing dense data and adding new combined-data insights.`,
   },
   {
     role: 'Software Engineer Intern',
@@ -65,6 +65,14 @@ export const projects = [
     tech: ['Python', 'Google Cloud Platform', 'Discord Webhooks', 'SIS API'],
     demo: 'https://sis-spot-bot.vercel.app/',
     github: 'https://github.com/RohanB2/SIS-Enrollment-Sniper'
+  },
+  {
+    title: 'Terminal Socket Chat Server',
+    description: 
+    `• Built a terminal-based, full-duplex chat application in \textbf{C} that functions natively as either a client or host server.\n
+    • Handled standard input and network data by writing an event loop around the poll() system call, allowing for concurrent reading and writing without thread blocking.\n
+    • Implemented unbuffered I/O and strict connection state handling to ensure messages display instantly and connections terminate cleanly without memory leaks.`,
+    tech: ['C', 'POSIX', 'Sockets', 'TCP/IP'],
   },
   {
     title: 'JSON Validator',
