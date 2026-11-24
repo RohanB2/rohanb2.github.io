@@ -42,7 +42,7 @@ export const work = [
   {
     role: 'Software Engineer Intern',
     company: 'Arcturus Technologies',
-    period: 'Jun 2025 — Aug 2025',
+    period: 'Jun 2024 — Aug 2024',
     description: 
     `• Developed a <strong>binary classification prediction</strong> model by leveraging the <strong>Yahoo Finance API</strong> & <strong>SciKit-Learn</strong>. Trained on <strong>OHLCV</strong> features using <strong>logistic regression</strong>, improving stock price prediction accuracy by <strong>15%</strong>.\n
     • Built a <strong>backtesting engine</strong> using <strong>Python, NumPy, Pandas, & Matplotlib</strong>; Integrated <strong>Monte Carlo simulations</strong> and <strong>historical bootstrapping</strong> to rigorously evaluate the performance of multiple trading strategy theses.\n
